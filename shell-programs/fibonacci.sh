@@ -1,13 +1,15 @@
-echo "Enter the number of terms"
-read n
-a=0 , b=1
-i=2
-echo "$a"
-echo "$b"
-for ( i=0 ; i<n-2 ; i++)
+echo "Fibonacci Series"
+echo -n "Enter the number of terms : "
+read n 
+
+a=0
+b=1
+
+echo -n "$a $b "
+for (( i=2; i<$n; i++ ))
         do
-        c = $((a+b))
-        echo "$c"
-        a = $b
-        b = $c
-        done
+        c=$((a+b))
+        echo -n "$c "
+        a=$b
+        b=$c
+done
